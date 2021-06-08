@@ -28,7 +28,7 @@ class Clippy():
         font = ImageFont.truetype("assets/comicsans.ttf")
         draw = ImageDraw.Draw(image)
 
-        draw.text((12,12), text=wrapped_text, fill='rgb(0,0,0)', font=font          )
+        draw.text((12,12), text=wrapped_text, fill='rgb(0,0,0)', font=font)
         # Save generated image.
         print(f"image saved: {self.output_name}.jpg")
         image.save(fp=f"{self.output_name}.jpg")
