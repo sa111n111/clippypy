@@ -37,13 +37,17 @@ class Clippy():
 
 def main():
     if __name__ == '__main__':
-        i = input("Enter the text you'd like for clippy to say: \n> ")
-        if len(i) == 0:
-            print( "Nothing provided, exiting..." )
-        j = input("Enter the output file name (Note: You do not need to put the file extension)\n>")
-        
-        c = Clippy(f'''{i}''', j)
-        c.generate_clippy()
+        while True:
+            i = input("Enter the text you'd like for clippy to say: \n> ")
+
+            j = input("Enter the output file name (Note: You do not need to put the file extension)\n(Note: If you would like to exit, simply hit CTRL+C)>")
+            c = Clippy(f'''{i}''', j)
+
+            if len(i) == 0:
+                print( "Nothing provided, exiting..." )
+                break
+
+            c.generate_clippy()
     
 
 main()
